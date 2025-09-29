@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayaz Furniture and Home Decor</title>
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="JavaScript" href="javascc.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+<style>
+        /* Your custom the hover effect is perfect.*/
+        .product-card{
+            transition: all 0.3s ease;
+        }
+        .product-card:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .ceo-profile {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.ceo-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-bottom: 5%;
+}
+
+.ceo-name {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.ceo-title {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    background-color: var(--card-bg-light);
+    color: var(--text-light);
+    background-color:black;
+    color: white;
+
+}
+.contact-form .btn { width: 100%; }
+.whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+
+     </style>
+</head>
+<body class="bg-gray-50 font-sans">
+     <a href="https://wa.me/2348080833627" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+<!-- Header & Navigation -->
+    <header class="header">
+        <nav class="container">
+            <a href="#" class="logo">HAYAZ FURNITURE</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section (Hero) -->
+        <section id="home" class="hero-section">
+            <div class="hero-content container">
+                <h1>Crafting Comfort, Designing Dreams.</h1>
+                <p>Discover a curated selection of local and foreign furniture that brings elegance and function to your space.</p>
+                <a href="#products" class="btn btn-dark">Explore Our Collection</a>
+            </div>
+        </section>
+         <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <div class="section-header">
+                </div>
+
+                <!-- Filter Buttons -->
+       <div id="designs-collection" class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">Our Furniture Collection</h1>
+        <p class="text-center text-gray-600 mb-8">Discover unique pieces from talented artisans, both local and international.</p>
+
+        <div class="flex flex-wrap justify-center mb-10 gap-4">
+             <button class="filter-btn px-6 py-2 text-base font-medium border-2 border-gray-300 bg-white text-gray-900 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 transition-colors" data-category="all">
+                All Designs
+            </button>
+            <button id="localFilterBtn" class="filter-btn px-6 py-2 text-base font-medium border-2 border-gray-800 bg-gray-800 text-white rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-opacity-50 transition-colors" data-category="local">
+                Local Designs
+            </button>
+            <button id="foreignFilterBtn" class="filter-btn px-6 py-2 text-base font-medium border-2 border-green-700 bg-green-700 text-white rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-50 transition-colors" data-category="foreign">
+                Foreign Designs
+            </button>
+        </div>
+
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="local">
+                <img src="4- Chairs Dinning Table.jpg" alt="Hand-carved Wooden Stool" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">4- Chairs Dinning Table</h3><p class="text-gray-600 mb-4">Elegant 4-seater dining set crafted for comfortand style perfect for family meals and small spaces.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦250,000</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="local">
+                <img src="Home made Turkish bed.jpg" alt="Woven Cane Chair" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Home made Turkish Bed</h3><p class="text-gray-600 mb-4">Beautifully crafted Turkish-style bed made locally with premium finishing and timeless design.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦800,000</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="local">
+                <img src="Tukish Chair Home Made.jpg" alt="Embossed Leather Ottoman" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Tukish Chair Home Made</h3><p class="text-gray-600 mb-4">Locally-made Turkish-style with Luxuriousfeel and classic design-ideal for modern interiors.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦650,000</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="local">
+                <img src="Semi-Royal Home made bed.jpg" alt="Clay Side Table" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Semi-Royal Home made Bed</h3><p class="text-gray-600 mb-4">A blend of elegance and simplicity this semi-royal bed offers comfortwith a touch of royalty.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦1,000,000</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="local">
+                <img src="Royal bed.jpg" alt="Minimalist Wooden Bench" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Royal bed</h3><p class="text-gray-600 mb-4">Statement piece with majestic design, rich details, and premium comfort for a royal experience.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦600,000</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="local">
+                <img src="cafe cubicle.jpg" alt="Woven Plant Hanger" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">cafe cubicle</h3><p class="text-gray-600 mb-4">Modern cafe cubicle designed for privacy and productivity in public or shared spaces.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">Best on measurement</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+            
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="foreign">
+                <img src="Office Cubicle.jpg" alt="Scandinavian Chair" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Office Cubicle</h3><p class="text-gray-600 mb-4">Functional office cubicle for focused work-customizable and built for daily efficiency.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">Best on measurement</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+             <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="foreign">
+                <img src="conference Table.jpg" alt="Italian Sofa" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">conference Table</h3><p class="text-gray-600 mb-4">Spacious conference table designed for meeting, collaboration, and boardroom elegance.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">Best on measurement</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+             <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="foreign">
+                <img src="model 6631.jpg" alt="Japanese Style Lamp" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Model 6631#</h3><p class="text-gray-600 mb-4">Elegant bed with matching 6-door wardrobe.stylish, durable, and prefect for modern bedrooms. </p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦1.2M</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+             <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="foreign">
+                <img src="Model 88-6.jpg" alt="Turkish Rug" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Model 88-6#</h3><p class="text-gray-600 mb-4">Bold design bed with Spacious 6-door wardrobe. Ideal for comfort and high-end appeal.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦1.2M</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+             <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="foreign">
+                <img src="Model 6138.jpg" alt="French Provincial Table" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Model 6138#</h3><p class="text-gray-600 mb-4">Timeless bed with organized 6-door wardrobe. A blend of class and functionality.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦1.2M</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+             <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="foreign">
+                <img src="Model F3110.jpg" alt="Brazilian Hammock" class="w-full h-64 object-cover">
+                <div class="p-6"><h3 class="text-xl font-semibold text-gray-900 mb-2">Model F3110#</h3><p class="text-gray-600 mb-4"> Rich-finish bed and wardrobe combo. clean design with generous storage space.</p><div class="flex items-center justify-between"><span class="text-2xl font-bold text-gray-800">₦1.2M</span><a href="https://wa.me/2348080833627" class="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition-colors">BUY NOW</a></div></div>
+            </div>
+            
+        </div>
+    </div>
+     </section>
+     <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Hayaz</h2>
+                </div>
+                <div class="ceo-profile" >
+                    <img src="IMG-20250819-WA0004.jpg" alt="CEO of Hayaz Furniture" class="ceo-image" >
+                    <h3 class="ceo-name">Ibrahim Hamisu Zango</h3>
+                    <p class="ceo-title">Founder & CEO</p>
+                    <p class="ceo-bio">With a passion for quality and an eye for design, Hayaz founded the company to bring premium furniture solutions to every home and office in Nigeria, focusing on customer satisfaction and timeless style.</p>
+                </div>
+
+                <div class="location-contact">
+                    <h3>Our Showroom</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Gandun Albasa, Opposite Trade Fair Complex, Zoo Road, Kano, Nigeria</p>
+                    <div class="map-container">
+                          <form class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <select name="subject" required>
+                            <option value="">Select Subject...</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Buying">Buying</option>
+                            <option value="Booking">Booking</option>
+                        </select>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary"><a href="ammmaaribrahimabubakar@gmail.com">Send Message</a></button>
+                    </form>
+                        </div>
+                    <a href="https://wa.me/2348080833627" target="_blank" class="btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-about">
+                <h4>Hayaz Furniture</h4>
+                <p>Your destination for quality furniture and home decor. Nationwide delivery available.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> 08080833627 / 08102686801</p>
+                <p><i class="fas fa-envelope"></i> hayazhomedecorfurniture@gmail.com </p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://www.instagram.com/hayaz_home_decor_furniture?igsh=c2E2d3d6OWxrYTZw"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/hayazfurniture?s=11"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/share/1B4ENsMV9t/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@hayazhomedecorfurnitures?_t=ZS-8ztezcpVcBE&_r=1"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hayaz Furniture and Home Decor. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+    
+
+</body>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            const filterProducts = (category) => {
+                productCards.forEach(card => {
+                    if (category === 'all' || category === card.dataset.category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            };
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.dataset.category;
+                    filterProducts(category);
+                });
+            });
+            
+            // This part for linking from another page still works perfectly.
+            // e.g., index.html#local-designs will still work.
+            if (window.location.hash) {
+                // remove the # from the hash
+                const categoryFromURL = window.location.hash.substring(1); 
+                const buttonToClick = document.querySelector(`.filter-btn[data-category='${categoryFromURL}']`);
+                if(buttonToClick) {
+                    buttonToClick.click();
+                }
+            }
+        });
+        
+    </script>
